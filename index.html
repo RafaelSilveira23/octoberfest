@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oktoberfest · O maior festival de cerveja do mundo</title>
+<meta name="description" content="Trabalho sobre o Oktoberfest de Munique: história, tradições, números, quiz e minijogo.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Caneca que enche com o scroll -->
+<div id="scroll-mug" aria-hidden="true">
+  <svg viewBox="0 0 60 70"><defs><clipPath id="mugClip"><rect x="6" y="8" width="38" height="56" rx="4"/></clipPath></defs>
+    <g clip-path="url(#mugClip)"><rect id="scroll-beer" x="6" y="64" width="38" height="0" fill="#f2b632"/><rect id="scroll-foam" x="6" y="64" width="38" height="0" fill="#fff8e7"/></g>
+    <rect x="6" y="8" width="38" height="56" rx="4" fill="none" stroke="currentColor" stroke-width="3"/>
+    <path d="M44 20 h7 a6 6 0 0 1 6 6 v14 a6 6 0 0 1 -6 6 h-7" fill="none" stroke="currentColor" stroke-width="3"/>
+  </svg>
+</div>
+
+<header class="nav">
+  <a href="#inicio" class="brand">Oktoberfest</a>
+  <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  <nav>
+    <a href="#onde">Onde</a><a href="#numeros">Números</a><a href="#historia">História</a>
+    <a href="#tradicoes">Tradições</a><a href="#jogo">Jogo</a><a href="#cultura">Cultura</a>
+    <a href="#quiz">Quiz</a><a href="#fontes">Fontes</a>
+  </nav>
+</header>
+
+<!-- 1. Início -->
+<section id="inicio" class="hero">
+  <div class="bunting" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="kicker">Munique · Alemanha · setembro–outubro</p>
+    <h1 class="hero-title" aria-label="Oktoberfest">Oktoberfest</h1>
+    <p class="hero-sub">O maior festival de cerveja do mundo</p>
+    <div class="countdown" id="countdown">
+      <p class="cd-label">Faltam para o Oktoberfest 2027 <small>(abertura prevista a 18 de setembro)</small></p>
+      <div class="cd-grid">
+        <div><span id="cd-d">–</span><small>dias</small></div>
+        <div><span id="cd-h">–</span><small>horas</small></div>
+        <div><span id="cd-m">–</span><small>min</small></div>
+        <div><span id="cd-s">–</span><small>seg</small></div>
+      </div>
+    </div>
+    <a href="#onde" class="btn">Começar a visita ↓</a>
+    <p class="authors">Trabalho realizado por <strong>Nuno Costa, Rodrigo Barbosa, Pedro Fernandes, Rafael Silveira e João Pinheiro</strong></p>
+  </div>
+</section>
+
+<!-- 2. Onde acontece -->
+<section id="onde" class="cream">
+  <div class="wrap">
+    <h2 class="reveal">Onde acontece</h2>
+    <p class="lead reveal">Clica nos botões ou nas canecas 🍺 do mapa para viajar de Munique às festas inspiradas no Oktoberfest pelo mundo.</p>
+    <div class="map-layout reveal">
+      <div id="map" role="region" aria-label="Mapa interativo">
+        <div class="map-fallback">
+          <img src="img/mapa_europa.jpg" alt="Mapa da Europa com a Alemanha assinalada">
+          <img src="img/mapa_local.jpg" alt="Mapa da Alemanha com Munique assinalada">
+          <p>A mostrar os mapas estáticos.</p>
+        </div>
+      </div>
+      <div class="map-side">
+        <div class="place-buttons" id="place-buttons"></div>
+        <div class="place-info" id="place-info" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div class="fact-grid">
+      <article class="fact reveal">
+        <h3>🇩🇪 Alemanha</h3>
+        <ul><li>Capital: Berlim</li><li>Cerca de 83,5 milhões de habitantes (2025)</li><li>Moeda: euro</li><li>Língua oficial: alemão</li><li>16 estados federados; a Baviera é o maior</li></ul>
+      </article>
+      <article class="fact reveal">
+        <h3>🏰 Baviera e Munique</h3>
+        <ul><li>Munique é a capital da Baviera, no sul do país</li><li>Cerca de 1,5 milhões de habitantes</li><li>Recinto: Theresienwiese, o «Wiesn», junto ao centro</li><li>Cultura bávara: trajes tradicionais, cerveja e música</li></ul>
+      </article>
+      <figure class="fact photo reveal"><img src="img/tenda.jpg" alt="Interior de uma tenda do Oktoberfest" data-lightbox></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Números -->
+<section id="numeros" class="navy">
+  <div class="wrap">
+    <h2 class="reveal">O festival em números</h2>
+    <div class="stats">
+      <div class="stat reveal"><span class="num" data-to="1810">0</span><p>Ano da primeira festa: o casamento do príncipe herdeiro Ludwig com a princesa Therese</p></div>
+      <div class="stat reveal"><span class="num" data-to="16">0</span><span class="unit">dias</span><p>Duração da edição de 2026, de 19 de setembro a 4 de outubro</p></div>
+      <div class="stat reveal"><span class="num" data-to="7.4" data-dec="1">0</span><span class="unit">milhões</span><p>Visitantes em 2026, um recorde (o anterior era 7,2 milhões, em 2023)</p></div>
+      <div class="stat reveal"><span class="num" data-to="6.7" data-dec="1">0</span><span class="unit">milhões de litros</span><p>Cerveja servida em 2026</p></div>
+      <div class="stat reveal"><span class="num" data-to="191">0</span><span class="unit">.ª edição</span><p>A edição de 2026, aberta pelo presidente da câmara Dominik Krause</p></div>
+      <div class="stat reveal"><span class="num" data-to="6">0</span><span class="unit">cervejeiras</span><p>Só as de Munique servem no recinto</p></div>
+    </div>
+    <div class="breweries reveal" id="breweries" aria-label="As seis cervejeiras de Munique"></div>
+  </div>
+</section>
+
+<!-- 4. História -->
+<section id="historia" class="cream">
+  <div class="wrap">
+    <h2 class="reveal">Linha do tempo</h2>
+    <p class="lead reveal">Clica num ano para saberes o que aconteceu.</p>
+    <div class="timeline reveal" id="timeline" role="tablist"></div>
+    <div class="timeline-card reveal" id="timeline-card" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- 5. Tradições -->
+<section id="tradicoes" class="navy">
+  <div class="wrap">
+    <h2 class="reveal">Tradições e curiosidades</h2>
+    <p class="lead reveal">Passa o rato (ou toca) nos cartões para os virares.</p>
+    <div class="flip-grid">
+      <button class="flip reveal"><span class="front"><span class="ico">🎺</span>Desfile dos taberneiros</span><span class="back">No dia da abertura, os donos das tendas desfilam em carroças desde o centro da cidade até ao recinto.</span></button>
+      <button class="flip reveal"><span class="front"><span class="ico">🛢️</span>O’zapft is!</span><span class="back">Ao meio-dia, na tenda Schottenhamel, o presidente da câmara abre o primeiro barril. A primeira caneca é para o ministro-presidente da Baviera.</span></button>
+      <button class="flip reveal"><span class="front"><span class="ico">🍺</span>A caneca de litro</span><span class="back">A cerveja serve-se na «Maß», uma caneca de um litro. Os empregados levam várias de uma vez até às mesas.</span></button>
+      <button class="flip reveal"><span class="front"><span class="ico">👗</span>Trajes tradicionais</span><span class="back">Lederhosen para eles e dirndl para elas são o traje típico de quem vai ao Wiesn.</span></button>
+    </div>
+
+    <h3 class="sub reveal">Pequeno dicionário bávaro <small>— clica em 🔊 para ouvir</small></h3>
+    <div class="words" id="words"></div>
+  </div>
+</section>
+
+<!-- 6. Minijogo -->
+<section id="jogo" class="cream">
+  <div class="wrap game-wrap">
+    <div class="game-text reveal">
+      <h2>Desafio: enche a Maß!</h2>
+      <p>No Oktoberfest, cada caneca tem uma marca de <strong>1 litro</strong>, e os visitantes queixam-se quando vem cerveja a menos. Mostra que eras um bom empregado:</p>
+      <ol><li>Carrega sem largar no botão (ou na barra de espaço).</li><li>Larga quando a cerveja chegar à linha dourada.</li><li>Tens 3 tentativas. Boa sorte!</li></ol>
+      <button class="btn big" id="pour-btn">🍺 Carrega para encher</button>
+      <p class="game-msg" id="game-msg" aria-live="polite">&nbsp;</p>
+      <div class="tries" id="tries"></div>
+      <p class="best">Melhor pontuação: <strong id="best">–</strong></p>
+    </div>
+    <div class="mug-stage reveal">
+      <svg id="big-mug" viewBox="0 0 200 240" role="img" aria-label="Caneca a encher">
+        <defs><clipPath id="bigClip"><rect x="20" y="20" width="120" height="200" rx="10"/></clipPath>
+          <linearGradient id="beerGrad" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f6c443"/><stop offset="1" stop-color="#d98e0b"/></linearGradient></defs>
+        <g clip-path="url(#bigClip)">
+          <rect id="beer" x="20" y="220" width="120" height="0" fill="url(#beerGrad)"/>
+          <rect id="foam" x="20" y="220" width="120" height="0" fill="#fffaf0"/>
+          <g id="bubbles"></g>
+        </g>
+        <line x1="14" x2="146" y1="60" y2="60" stroke="#d9a21b" stroke-width="3" stroke-dasharray="8 5"/>
+        <text x="150" y="64" font-size="13" fill="#b07d0e" font-family="Georgia">1 L</text>
+        <rect x="20" y="20" width="120" height="200" rx="10" fill="rgba(255,255,255,.15)" stroke="#14213D" stroke-width="5"/>
+        <path d="M140 60 h22 a18 18 0 0 1 18 18 v60 a18 18 0 0 1 -18 18 h-22" fill="none" stroke="#14213D" stroke-width="10"/>
+      </svg>
+      <p class="litres"><span id="litres">0,00</span> L</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Vídeo -->
+<section id="video" class="navy">
+  <div class="wrap video-wrap">
+    <a class="video-card reveal" href="https://blog.ricksteves.com/?p=18832" target="_blank" rel="noopener">
+      <img src="img/tenda_video.jpg" alt="Interior de uma tenda do Oktoberfest">
+      <span class="play">▶</span>
+      <span class="video-cap">Ver o vídeo do festival (Rick Steves)</span>
+    </a>
+    <div class="reveal">
+      <h2>Vídeo do festival</h2>
+      <p>O vídeo abre num separador novo.</p>
+      <ul class="links">
+        <li><a href="https://blog.ricksteves.com/?p=18832" target="_blank" rel="noopener">Rick Steves: Munich’s Oktoberfest</a></li>
+        <li><a href="https://www.deutschland.de/en/videos/ozapft-is-190th-munich-oktoberfest-kicks-off" target="_blank" rel="noopener">O’zapft is: abertura da 190.ª edição (2025)</a></li>
+        <li><a href="https://amara.org/videos/frqAVUnw4q1G/" target="_blank" rel="noopener">Oktoberfest: tudo o que precisas de saber</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Repercussão cultural -->
+<section id="cultura" class="cream">
+  <div class="wrap">
+    <h2 class="reveal">Repercussão cultural</h2>
+    <div class="tabs reveal" role="tablist">
+      <button role="tab" aria-selected="true" data-tab="filmes">🎬 Filmes e séries</button>
+      <button role="tab" aria-selected="false" data-tab="livros">📚 Livros</button>
+      <button role="tab" aria-selected="false" data-tab="jogos">🎲 Jogos</button>
+    </div>
+    <div class="tab-panels reveal">
+      <div class="tab-panel active" id="tab-filmes">
+        <article><h4>Beerfest <span>(2006)</span></h4><p>Comédia americana sobre dois irmãos que descobrem um concurso secreto de cerveja no Oktoberfest.</p></article>
+        <article><h4>Oktoberfest 1900 <span>(2020)</span></h4><p>Série alemã (na Netflix como <em>Oktoberfest: Beer &amp; Blood</em>) sobre a luta entre cervejeiros de Munique.</p></article>
+      </div>
+      <div class="tab-panel" id="tab-livros">
+        <article><h4>Oktoberfest <span>(2011)</span></h4><p>Thriller de Christoph Scholder passado durante o Wiesn.</p></article>
+        <article><h4>Code Name: Oktoberfest</h4><p>Policial de Alessandra Barabaschi para quem está a aprender alemão.</p></article>
+      </div>
+      <div class="tab-panel" id="tab-jogos">
+        <article><h4>Oktoberfest <span>(2017)</span></h4><p>Jogo de tabuleiro em que os jogadores gerem tendas de cerveja.</p></article>
+        <article><h4>Heroes of Oktoberfest <span>(2024)</span></h4><p>Jogo de cartas para dois jogadores.</p></article>
+      </div>
+    </div>
+
+    <div class="world reveal">
+      <div>
+        <h3>Influência mundial</h3>
+        <p>Há festas inspiradas no Oktoberfest em <strong>Kitchener-Waterloo</strong> (Canadá), <strong>Blumenau</strong> (Brasil) e <strong>Cincinnati</strong> (EUA), algumas com centenas de milhares de visitantes. O dirndl e as lederhosen ganharam também presença na moda.</p>
+        <a href="#onde" class="btn small" data-fly="kitchener">Ver no mapa</a>
+      </div>
+      <img src="img/grupo1.jpg" alt="Visitantes com lederhosen" data-lightbox>
+      <img src="img/grupo2.jpg" alt="Visitantes com dirndl numa tenda" data-lightbox>
+    </div>
+  </div>
+</section>
+
+<!-- 9. Quiz -->
+<section id="quiz" class="navy">
+  <div class="wrap narrow">
+    <h2 class="reveal">Quiz: sabes tudo sobre o Oktoberfest?</h2>
+    <div class="quiz reveal" id="quiz-box" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- 10. Galeria -->
+<section id="galeria" class="cream">
+  <div class="wrap">
+    <h2 class="reveal">Galeria</h2>
+    <div class="gallery">
+      <img src="img/tenda.jpg" alt="Tenda decorada" data-lightbox class="reveal">
+      <img src="img/empregado.jpg" alt="Empregado com várias canecas" data-lightbox class="reveal">
+      <img src="img/dirndl.jpg" alt="Visitante com dirndl" data-lightbox class="reveal">
+      <img src="img/tenda_video.jpg" alt="Tenda com o teto colorido" data-lightbox class="reveal">
+      <img src="img/grupo1.jpg" alt="Grupo com lederhosen" data-lightbox class="reveal">
+      <img src="img/grupo2.jpg" alt="Grupo com dirndl" data-lightbox class="reveal">
+    </div>
+  </div>
+</section>
+
+<!-- 11. Webgrafia -->
+<section id="fontes" class="navy">
+  <div class="wrap">
+    <h2 class="reveal">Webgrafia</h2>
+    <details class="reveal" open><summary>O festival</summary><ul>
+      <li>Euronews (5 out. 2026): <a target="_blank" rel="noopener" href="https://www.euronews.com/2026/10/05/oktoberfest-draws-record-74-million-visitors-in-munich">Oktoberfest draws record 7.4 million visitors in Munich</a></li>
+      <li>Deutschland.de (2025): <a target="_blank" rel="noopener" href="https://www.deutschland.de/en/videos/ozapft-is-190th-munich-oktoberfest-kicks-off">‘O’zapft is’: 190th Munich Oktoberfest kicks off</a></li>
+      <li>Oktoberfest.de (2025): <a target="_blank" rel="noopener" href="https://www.oktoberfest.de/magazin/oktoberfest-news/190-oktoberfest-startet-bei-hochsommerlichen-temperaturen">190. Oktoberfest startet bei hochsommerlichen Temperaturen</a></li>
+      <li>Tiroler Tageszeitung (2026): <a target="_blank" rel="noopener" href="https://www.tt.com/artikel/30942607/o-zapft-is-so-wurde-das-191-muenchner-oktoberfest-eroeffnet">So wurde das 191. Münchner Oktoberfest eröffnet</a></li>
+      <li>Destatis (2026): <a target="_blank" rel="noopener" href="https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/06/PD26_203_124.html">Bevölkerung Deutschlands sinkt im Jahr 2025 um 0,1 %</a></li>
+    </ul></details>
+    <details class="reveal"><summary>Vídeos e mapas</summary><ul>
+      <li>Rick Steves’ Europe: <a target="_blank" rel="noopener" href="https://blog.ricksteves.com/?p=18832">Video: Munich’s Oktoberfest</a></li>
+      <li>Amara: <a target="_blank" rel="noopener" href="https://amara.org/videos/frqAVUnw4q1G/">Oktoberfest 2019, Munich, everything you need to know</a></li>
+      <li>StepMap: <a target="_blank" rel="noopener" href="https://www.stepmap.de">mapa da Europa com a Alemanha assinalada</a></li>
+      <li>Google Maps: <a target="_blank" rel="noopener" href="https://maps.google.com">mapa da Alemanha com Munique assinalada</a></li>
+      <li>Mapa interativo: <a target="_blank" rel="noopener" href="https://github.com/themustafaomar/jsvectormap">jsVectorMap</a></li>
+    </ul></details>
+    <details class="reveal"><summary>Repercussão cultural</summary><ul>
+      <li>Wikipedia: <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Beerfest">Beerfest</a></li>
+      <li>Netflix: <a target="_blank" rel="noopener" href="https://www.netflix.com/title/81249469">Oktoberfest: Beer &amp; Blood (Oktoberfest 1900)</a></li>
+      <li>Lesejury: <a target="_blank" rel="noopener" href="https://www.lesejury.de/christoph-scholder/buecher/oktoberfest/9783426506509">Christoph Scholder, Oktoberfest</a></li>
+      <li>Perlego: <a target="_blank" rel="noopener" href="https://www.perlego.com/book/1043056/code-name-oktoberfest-language-course-german-level-a1-a-crime-novel-and-tourist-guide-through-munich-pdf">Code Name: Oktoberfest (Alessandra Barabaschi)</a></li>
+      <li>Board Game Matcher: <a target="_blank" rel="noopener" href="https://boardgamematcher.com/game/oktoberfest">Oktoberfest (2017)</a> · <a target="_blank" rel="noopener" href="https://boardgamematcher.com/game/heroes-of-oktoberfest">Heroes of Oktoberfest (2024)</a></li>
+      <li>Wikipedia: <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Oktoberfest_celebrations">Oktoberfest celebrations</a></li>
+    </ul></details>
+    <p class="consulted">Consultado entre 21 de outubro e 6 de novembro de 2026</p>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Oktoberfest</strong> · Trabalho de Nuno Costa, Rodrigo Barbosa, Pedro Fernandes, Rafael Silveira e João Pinheiro</p>
+  <a href="#inicio">Voltar ao início ↑</a>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden><button aria-label="Fechar">✕</button><img alt=""><p></p></div>
+
+<script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.7.0/dist/jsvectormap.min.js"></script>
+<script>window.jsVectorMap || document.write('<script src="lib/jsvectormap.min.js"><\/script>');</script>
+<script>if (window.jsVectorMap) { var addMap0 = jsVectorMap.addMap; jsVectorMap.addMap = function () { window.mapaOk = true; return addMap0.apply(this, arguments); }; }</script>
+<script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.7.0/dist/maps/world.js"></script>
+<script>window.jsVectorMap && !window.mapaOk && document.write('<script src="lib/world.js"><\/script>');</script>
+<script src="script.js"></script>
+</body>
+</html>
